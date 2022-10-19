@@ -31,4 +31,5 @@
 
 3. zd3And4 - задание 3 и 4
 
-![myplot](https://user-images.githubusercontent.com/49618961/194585962-9949369d-9aee-4eb1-bd75-c7318ad347ba.png)
+![gist](https://user-images.githubusercontent.com/49618961/196739188-311aa1c2-2b6f-42f8-bada-eb98d0e492bb.png)
+
