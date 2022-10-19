@@ -18,5 +18,5 @@ res = []
 for el in x:
     res.append(normFunc(el))
 
-'''plt.plot(res)
-plt.show()'''
+plt.plot(res)
+plt.show()

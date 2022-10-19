@@ -44,7 +44,7 @@ def model_n(xTab, yTab, xn):
         for j in range(1, len(xTab)):
             if yTab[j-1] <= x <= yTab[j]:
                 y = ((x - yTab[j])/(yTab[j-1] - yTab[j])) * xTab[j-1] + ((x - yTab[j-1])/(yTab[j] - yTab[j-1])) * xTab[j]
-                res.append(int(y))
+                res.append(y)
     return res
 
 
@@ -77,7 +77,7 @@ print("Task 4")
 print("-----------")
 
 
-def freqNumbers(A, B, m, res):
+def freqNumbers(A, B, m, res, n):
     S = (B - A) / m
     freq = []
     for i in range(0, m-1):
@@ -85,22 +85,23 @@ def freqNumbers(A, B, m, res):
         for j in range(0, len(res)):
             t = int(res[j]/S)
             freq[t] = freq[t] + 1
-    return freq
+    r = [x / n for x in freq]
+    return r
 
 
-fr1 = freqNumbers(0, 20, 20, nums1)
+fr1 = freqNumbers(0, 20, 100, nums1, 1000)
 print("Частота при n = 10^3: ", fr1)
-fr2 = freqNumbers(0, 20, 20, nums2)
+fr2 = freqNumbers(0, 20, 100, nums2, 10000)
 print("Частота при n = 10^4: ", fr2)
-fr3 = freqNumbers(0, 20, 20, nums2)
+fr3 = freqNumbers(0, 20, 100, nums3, 100000)
 print("Частота при n = 10^5: ", fr3)
-fr4 = freqNumbers(0, 20, 20, nums2)
+fr4 = freqNumbers(0, 20, 100, nums4, 1000000)
 print("Частота при n = 10^6: ", fr4)
 print("-----------")
 
 
 fig, ax = plt.subplots(4, 1)
-x = np.arange(1, 21)
+x = np.arange(1, 101)
 
 ax[0].bar(x, fr1)
 ax[1].bar(x, fr2)
